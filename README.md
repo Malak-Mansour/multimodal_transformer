@@ -7,21 +7,24 @@
 | **Meta-Transformer-L14** | LAION-2B          | Large   | 302M        | [ckpt](https://drive.google.com/file/d/15EtzCBAQSqmelhdLz6k880A19_RpcX9B/view?usp=drive_link) |
 
 
-modalities = {
-    "vision": 1024,          # Strawberry Picking
-    "proprioception": 256,
-    "tactile": 128,
-    
-    "pose": 64,              # Vertebrae Scanning
-    "ultrasonic": 128,
-    "detected_position": 64, 
-    
-    "gps": 64,               # Autonomous Vehicle
-    "imu": 256,
-    "mmwave": 512,
-    "lidar": 1024,
-    "camera": 1024,
-}
+## "Modalities per use case": their dimension
+#### Strawberry Picking
+"vision": 1024,          
+"proprioception": 256,
+"tactile": 128,
+
+#### Vertebrae Scanning
+"pose": 64,             
+"ultrasonic": 128,
+"detected_position": 64, 
+
+#### Autonomous Vehicle
+"gps": 64,              
+"imu": 256,
+"mmwave": 512,
+"lidar": 1024,
+"camera": 1024,
+
 
 ## Architecture
 1. (MT*) **Modality-Specific Tokenization:** Each modality, despite having different dimensions, is tokenized independently into a shared embedding size of 768 to ensure compatibility with the transformer layers and effectively fuse information from different sources to model meaningful interactions across modalities during self attention.
