@@ -39,7 +39,7 @@
    
 4. **Shared Encoder:** Each token attends to others, enabling the model to learn cross-modal dependencies using multi-head attention with 12 heads and 6 layers. Modalities depend on each other (e.g., how lidar relates to GPS). Therefore, the encoder outputs context-aware embeddings that combine multimodal information.
 
-5. **Task-Specific Heads:** Each head is fine-tuned to predict the next pose (x, y, z, α, β, γ) for its respective task (strawberry_picking, vertebrae_scanning, autonomous_vehicle).
+5. (MT*) **Task-Specific Heads:** Each head is fine-tuned to predict the next pose (x, y, z, α, β, γ) for its respective task (strawberry_picking, vertebrae_scanning, autonomous_vehicle).
 
 6. **Training Workflow:**
   - Loss Function: Mean Squared Error (MSE) compares predicted poses to target values.
@@ -48,8 +48,8 @@
 
 
 ## Features of This Implementation
-- **Scalability:** accommodates additional modalities by defining new tokenizers in the modalities dictionary.
-- **Flexibility:** Task-specific heads allow specialization for diverse use cases (e.g., robotics, medical devices, autonomous systems).
+- (MT*) **Scalability:** accommodates additional modalities by defining new tokenizers in the modalities dictionary.
+- (MT*) **Flexibility:** Task-specific heads allow specialization for diverse use cases (e.g., robotics, medical devices, autonomous systems).
 - **Cross-Modal Learning:** Shared transformer encoder enables interactions between modalities, such as tactile-vision alignment for strawberry picking.
 - **Temporal Dynamics:** Temporal encoding ensures sequential information is preserved, crucial for pose prediction.
 - **Efficient Preprocessing:** Uses pretrained models like ResNet for feature extraction, saving training time.
