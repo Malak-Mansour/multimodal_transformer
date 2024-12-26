@@ -10,20 +10,20 @@
 ## "Modalities per use case": their dimension
 #### Strawberry Picking
 "vision": 1024,          
-"proprioception": 256,
-"tactile": 128,
+"proprioception": 256,             
+"tactile": 128,             
 
 #### Vertebrae Scanning
 "pose": 64,             
-"ultrasonic": 128,
-"detected_position": 64, 
+"ultrasonic": 128,             
+"detected_position": 64,             
 
 #### Autonomous Vehicle
 "gps": 64,              
-"imu": 256,
-"mmwave": 512,
-"lidar": 1024,
-"camera": 1024,
+"imu": 256,             
+"mmwave": 512,             
+"lidar": 1024,             
+"camera": 1024,             
 
 
 ## Architecture
