@@ -1,4 +1,4 @@
-# multimodal transformer for pose prediction in strawberry picking, autnomous driving, and vertebrae scanner
+# multimodal transformer for pose prediction in strawberry picking, autonomous driving, and vertebrae scanner
 
 
 | Model                 | Pretraining Dataset | Scale   | #Parameters | .pth Download Link                                                                 |
